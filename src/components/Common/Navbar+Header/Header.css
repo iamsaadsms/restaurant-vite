@@ -1,0 +1,33 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: rgb(37, 37, 37);
+    color: rgb(221, 221, 221);
+    padding: 1vh 2vw;
+    width: 100vw;
+}
+
+.l-header, .r-header {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2vw;
+}
+
+.r-header {
+    font-size: 2.5vh;
+}
+
+.l-header {
+    font-size: 2vh;
+}
+
+.loc-icon {
+    padding-right: 0.5vw;
+}
+
+@media(max-width:600px) {
+    .Header {
+        display: none;
+    }
+}

@@ -1,0 +1,34 @@
+[
+    {
+        "name":"combo",
+        "img":"cat1.png"
+    },
+    {
+        "name":"kids menu",
+        "img":"cat2.png"
+    },
+    {
+        "name":"pizza",
+        "img":"cat3.png"
+    },
+    {
+        "name":"box meal",
+        "img":"cat4.png"
+    },
+    {
+        "name":"burger",
+        "img":"cat5.png"
+    },
+    {
+        "name":"chicken",
+        "img":"cat6.png"
+    },
+    {
+        "name":"sauces",
+        "img":"cat7.png"
+    },
+    {
+        "name":"drinks",
+        "img":"cat8.png"
+    }
+]

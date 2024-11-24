@@ -1,0 +1,15 @@
+.btn {
+    color: black !important;
+    border: 1px solid #ffc222 !important; /* Use !important to ensure the border color is applied */
+    padding: 1.5vh 3vw !important;
+    margin-top: 1vh;
+    border-radius: 10px !important; /* Use !important to ensure the border radius is applied */
+    background: #ffc222 !important; /* Background color */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.btn:hover {
+    color: white !important;
+    background-color: #fcb900 !important; /* Background color on hover */
+}

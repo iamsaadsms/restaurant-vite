@@ -1,0 +1,26 @@
+[
+    {
+        "head":"Fast Food",
+        "topic":"Meals",
+        "phen":"NEW PHENOMENAL BURGER TASTE",
+        "price":"$19.90",
+        "img1":"chic.png",
+        "back":"sh.png"
+    },
+    {
+        "head":"House",
+        "topic":"Burgers",
+        "phen":"NEW PHENOMENAL BURGER TASTE",
+        "price":"$12.90",
+        "img1":"bur.png",
+        "back":"sh.png"
+    },
+    {
+        "head":"Hot Fresh",
+        "topic":"Salads",
+        "phen":"NEW PHENOMENAL BURGER TASTE",
+        "price":"$10.90",
+        "img1":"sal.png",
+        "back":"sh.png"
+    }
+]

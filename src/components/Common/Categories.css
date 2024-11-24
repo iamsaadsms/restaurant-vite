@@ -1,0 +1,129 @@
+.Categories {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 1vh 1vw;
+    border: 2px solid rgb(87, 87, 87, 0.2);
+    border-radius: 25px;
+    height: 60vh;
+    position: sticky; /* Make the div sticky */
+    top: 6vw; /* The distance from the top of the viewport where the sticky effect starts */
+    z-index: 100; /* Ensures it stays above other content */
+}
+
+
+.category-icon {
+    display: flex;
+    color: rgb(87, 87, 87);
+    padding: 1vh 0vw;
+    border-bottom: 1px dotted rgb(146, 146, 146, 0.8);
+    justify-content: center;
+    padding-right: 1vw;
+    cursor: pointer;
+    width: 20vw;
+}
+
+.category-icon:hover {
+    color: rgb(252, 185, 0, 0.9);
+}
+
+.cat-icon {
+    font-size: 3vh;
+    padding-right: 1vw;
+}
+
+.cat-n {
+    font-size: 2.5vh;
+}
+
+.cat-head {
+    font-size: 3vh;
+    font-weight: bold;
+
+}
+
+.cat-items {
+    background: rgb(255, 218, 185, 0.4);
+    padding: 1vh 1vw;
+    border-radius: 5px;
+}
+
+.cat-img {
+    width: 2vw;
+}
+
+.cat-elements {
+    margin-top: 2vh;
+}
+
+.cat-top {
+    display: flex;
+    justify-content: left;
+    width: 98vw;
+    margin-top: 10vh;
+    
+    padding-top: 10vh;
+}
+
+.fil-btn {
+    display: none;
+}
+
+.close-icon {
+    font-size: 2.5vh;
+    cursor: pointer;
+    display: none; /* Hidden on larger screens */
+}
+
+/* Sidebar Transition and Button Visibility for Small Screens */
+@media(max-width: 600px) {
+    .close-icon {
+        display: block;
+        position: absolute;
+        top: 1vh;
+        right: 1vw;
+        font-size: 4.5vh;
+        color: rgb(87, 87, 87);
+    }
+    .cat-top {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5vh;
+    }
+    .filter-button {
+        display: block;
+        height: 10vh;
+    }
+    .fil-btn {
+        display: flex;
+        padding-left: 5vw;
+    }
+    .cat-items {
+        background: rgb(255, 218, 185, 0.4);
+        padding: 2vh 5vw;
+    }
+    .cat-icon {
+        font-size: 3vh;
+        padding-right: 4vw;
+    }
+    .Categories {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Start off-screen to the left */
+        height: 100%;
+        width: 60vw;
+        background-color: white;
+        transition: left 0.3s ease-in-out; /* Smooth transition for left sliding */
+        z-index: 1000;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    }
+    .category-icon {
+        display: flex;
+        justify-content: left;
+        width: 100%;
+    }
+    .Categories.open {
+        left: 0; /* Slide in from the left */
+    }
+    .cat-head {
+        font-size: 4vh;
+    }
+}

@@ -1,0 +1,23 @@
+[
+    {
+        "head": "Any day offers",
+        "sub": "New Phenomenal Burger Taste",
+        "last": "$12.90",
+        "img": "p1.png",
+        "circle": "cir.png"
+    },
+    {
+        "head": "Other flavors",
+        "sub": "Save room.\\n We made salats",
+        "last": "$12.90",
+        "img": "p2.png",
+        "circle": "cir.png"
+    },
+    {
+        "head": "Find a Poco store near you",
+        "sub": "",
+        "last": "CONTACT US",
+        "img": "p3.png",
+        "circle": "cir.png"
+    }
+]

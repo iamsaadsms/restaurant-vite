@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Sarah Paulsen",
+        "stars": 4,
+        "review": "I couldn't get enough of the Pasta! The crispy bread, infused with garlic and olive oil, was the perfect appetizer to start my meal."
+    },
+    {
+        "name": "John Smith",
+        "stars": 5,
+        "review": "The steak was cooked to perfection. The seasoning was just right, and the service was top-notch. Highly recommend!"
+    },
+    {
+        "name": "Emily Johnson",
+        "stars": 3,
+        "review": "The atmosphere was nice, but the service was a bit slow. The salad was fresh, but the main course was underwhelming."
+    },
+    {
+        "name": "Michael Brown",
+        "stars": 2,
+        "review": "Disappointed with the quality of the food. The chicken was dry, and the vegetables were overcooked. Won't be coming back."
+    },
+    {
+        "name": "Olivia Davis",
+        "stars": 4,
+        "review": "Great place for brunch! The pancakes were fluffy, and the coffee was strong. A little pricey, but worth it for the quality."
+    },
+    {
+        "name": "James Wilson",
+        "stars": 5,
+        "review": "Absolutely loved the seafood platter. Fresh and flavorful, with a great variety of dishes. Service was friendly and efficient."
+    },
+    {
+        "name": "Ava Martinez",
+        "stars": 3,
+        "review": "The food was decent, but the portions were small for the price. The ambiance was nice, though, and the staff was polite."
+    },
+    {
+        "name": "Liam Anderson",
+        "stars": 4,
+        "review": "Really enjoyed the burgers here. Juicy and cooked just right. The fries were crispy and delicious. A solid choice for a casual meal."
+    },
+    {
+        "name": "Sophia Taylor",
+        "stars": 5,
+        "review": "A fantastic dining experience! The dessert was out of this world, and the overall presentation of the food was impressive."
+    },
+    {
+        "name": "Benjamin Lee",
+        "stars": 2,
+        "review": "The restaurant has a nice setting, but the food didn't live up to the expectations. The pasta was bland, and the service was lacking."
+    }
+]

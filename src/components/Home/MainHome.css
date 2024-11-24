@@ -1,0 +1,243 @@
+.MainHome {
+    position: relative;
+    width: 100vw;
+    height: 170vh;
+    overflow: hidden;
+}
+
+.bg-main {
+    background: #333;
+    position: relative;
+    height: 160vh;
+}
+
+/* .back-img {
+    width: 50vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    filter: blur(10%);
+    z-index: 1;
+} */
+
+.piz-img {
+    width: 50vw;
+    height: auto;
+    position: absolute;
+    top: 10vw;
+    left: 50vw;
+    object-fit: contain;
+    z-index: 2;
+    transition: transform 0.1s ease-out;
+}
+
+.shape-img {
+    width: 35vw;
+    height: 200vh;
+    position: absolute;
+    top: -5vw;
+    left: 50vw;
+    object-fit: fill;
+    z-index: 1;
+    transition: transform 0.1s ease-out;
+}
+
+.leaf-img {
+    width: 35vw;
+    height: 80vh;
+    position: absolute;
+    top: 50vh;
+    left: 45vw;
+    object-fit: fill;
+    z-index: 1;
+    transition: transform 0.1s ease-out;
+}
+
+.tom-img {
+    width: 35vw;
+    height: auto;
+    position: absolute;
+    top: -5vw;
+    left: 20vw;
+    object-fit: contain;
+    z-index: 3;
+}
+
+.absolute-text {
+    position: absolute;
+    z-index: 3;
+    top: 40vh;
+    left: 2vw;
+    color: rgb(255, 255, 255);
+    font-family: gilroy, helveticaneue-light, helvetica neue light, helvetica neue, Helvetica, Arial, lucida grande, sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
+}
+
+.abs-h {
+    font-size: 11vh;
+    font-weight: bold;
+    white-space: wrap;
+    line-height: 12vh;
+}
+
+.piz-h {
+    color: rgb(252, 185, 0);
+}
+
+.abs-s {
+    padding-top: 3vh;
+    font-size: 5vh;
+    font-weight: bold;
+    color: rgb(0, 161, 73);
+}
+
+.abs-ex {
+    font-size: 2.75vh;
+    padding-top: 2vh;
+    letter-spacing: 0.1vw;
+}
+
+.abs-btn-price {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-between;
+    width: 25vw;
+}
+
+.abs-new-prc {
+    font-size: 6vh;
+    font-weight: bold;
+    color: rgb(0, 161, 73);
+}
+
+.abs-old-prc {
+    position: absolute;
+    z-index: 3;
+    left: 25vw;
+    font-size: 2.75vh;
+    font-weight: bold;
+    letter-spacing: 0.05vw;
+    color: rgb(223, 223, 223);
+}
+
+
+.abs-btn-menu {
+    position: absolute;
+    z-index: 10;
+    width: 10vw;
+    top: 155vh;
+    left: 45vw;
+}
+
+@media(max-width:600px) {
+    .MainHome {
+        height: 140vh;
+        margin-bottom: 10vh;
+        position: relative;
+    }
+    .back-img {
+        vertical-align: bottom;
+        height: 130vh;
+    }
+    .tom-img {
+        width: 75vw;
+        height: auto;
+        position: absolute;
+        top: -20vw;
+        left: 60vw;
+    }
+    .piz-img {
+        width: 90vw;
+        height: auto;
+        position: absolute;
+        top: 150vw;
+        left: 5vw;
+        transform: none; /* Prevent image from moving on scroll */
+    }
+    .leaf-img {
+        width: 55vw;
+        height: 80vh;
+        position: absolute;
+        top: -45vw;
+        left: -15vw;
+        object-fit: contain;
+        transform: none; /* Prevent image from moving on scroll */
+    }
+    .shape-img {
+        display: none;
+    }
+
+    .absolute-text {
+        position: absolute;
+        top: 15vh;
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center the elements */
+        text-align: center;
+        width: 100%; /* Ensure full width */
+    }
+
+    .abs-h {
+        font-size: 3.2em; /* Adjust font size for mobile */
+        font-weight: bold;
+        width: 100%; /* Ensure it takes up the full width */
+        line-height: 2em;
+    }
+
+    .abs-med {
+        white-space: nowrap; /* Prevent wrapping */
+        text-align: center;
+    }
+
+    .abs-s {
+        font-size: 2em; /* Adjust for mobile */
+        font-weight: bold;
+        color: rgb(0, 161, 73);
+        padding:0;
+        white-space: nowrap; /* Prevent wrapping */
+        text-align: center;
+    }
+
+    .abs-ex {
+        font-size: 1.3em;
+        padding-top: 1vh;
+        letter-spacing: 0.1vw;
+        white-space: wrap; /* Prevent wrapping */
+    }
+    .abs-btn-price {
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+        justify-content: center;
+        align-items: center;
+    }
+    .abs-old-prc {
+        position:static;
+        margin-left: 2vw;
+        font-size: 0.6em;
+    }
+    .abs-new-prc {
+        font-size: 2.2em;
+    }
+    .abs-btn {
+        font-size: 2.5em;
+        width: 45vw;
+    }
+    .abs-btn-price {
+        margin-top: 2vh;
+    }
+    .abs-btn-menu {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        top: 135vh;
+        z-index: 1500;
+    }
+    .btn-menu {
+        width: 30vw;
+    }
+}

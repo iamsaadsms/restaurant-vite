@@ -1,0 +1,197 @@
+.HomePopular {
+    margin-bottom: 15vh;
+}
+
+.tabs-popular {
+    font-family: gilroy, helveticaneue-light, helvetica neue light, helvetica neue, Helvetica, Arial, lucida grande, sans-serif;
+    color: black;
+}
+
+.popular-head {
+    font-size: 7vh;
+    font-weight: bold;
+    text-align: center;
+    margin: 10vh 0;
+    margin-top: 15vh;
+}
+
+.tabs-btn {
+    border-radius: 15px;
+    background: rgba(139, 139, 139, 0.1);
+    padding: 3vh 4vw;
+    border: 1px solid rgba(252, 185, 0, 0.2);
+    cursor: pointer;
+    font-size: 2.2vh;
+    font-weight: bold;
+}
+
+.tabs-popular.active .tabs-btn {
+    background: rgb(252, 185, 0);
+    color: white;
+    font-weight: bold;
+}
+
+.tabs-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2vw;
+    margin: 10vh 0;
+}
+
+.tabs-btn:hover {
+    background: rgb(252, 185, 0);
+}
+
+.tabs-normal {
+    display: flex;
+    gap: 4vw;
+}
+
+.tabs-dropdown-button {
+    display: none;
+    font-size: 2.2vh;
+    font-weight: bold;
+    padding: 1.5vh 4vw;
+    background-color: rgb(252, 185, 0);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/* Dropdown styling for smaller screens */
+.tabs-dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+    background-color: white;
+    width: 90%;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 2vh 0;
+    z-index: 10;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tabs-dropdown .tabs-popular {
+    width: 80%;
+    padding: 1.5vh 0;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 2vh;
+    font-weight: bold;
+    color: rgb(50, 50, 50);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tabs-dropdown .tabs-popular:hover {
+    background-color: rgba(252, 185, 0, 0.15);
+}
+
+.tabs-dropdown .tabs-popular.active {
+    background-color: rgb(252, 185, 0);
+    color: white;
+}
+
+/* Parent container for relative positioning */
+.tabs-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2vw;
+    margin: 10vh 0;
+}
+
+.tabs-dropdown {
+    position: absolute;
+    top: 100%; /* Aligns below the dropdown button */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    width: 80%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 1.5vh 0;
+    z-index: 20; /* Ensure dropdown is above other elements */
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tabs-dropdown .tabs-popular {
+    width: 100%;
+    padding: 1vh 0;
+    text-align: center;
+    font-size: 2vh;
+    font-weight: bold;
+    color: rgb(50, 50, 50);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tabs-dropdown .tabs-popular:hover {
+    background-color: rgba(255, 188, 3, 0.15);
+}
+
+.tabs-dropdown .tabs-popular.active {
+    background-color: rgb(252, 185, 0);
+    color: white;
+}
+.popular-btn {
+    display: flex;
+    justify-content: center;
+}
+/* Media query for small screens */
+@media (max-width: 600px) {
+    .tabs-container {
+        margin: 5vh 0;
+    }
+    .tabs-normal {
+        display: none; /* Hide normal tabs on small screens */
+    }
+
+    .tabs-dropdown-button {
+        display: block;
+        width: 95vw;
+        margin: 0 auto;
+    }
+
+    /* Show the dropdown only if `isDropdownOpen` is true */
+    .tabs-dropdown {
+        display: flex; /* Make dropdown visible */
+        flex-direction: column;
+        align-items: center;
+        gap: 1vh;
+        width: 95vw;
+    }
+    .tabs-btn {
+        background: transparent;
+        padding: 3vh 4vw;
+        border: none;
+        cursor: pointer;
+        font-size: 2.2vh;
+        font-weight: bold;
+    }
+    .tabs-popular {
+        border: 1px solid rgb(73, 73, 73, 0.2);
+    }
+    
+    .tabs-popular.active .tabs-btn {
+        background: transparent;
+    }
+    .tabs-btn:hover {
+        background: transparent;
+    }
+    .popular-btn {
+        display: flex;
+        justify-content: center;
+    }
+}
+

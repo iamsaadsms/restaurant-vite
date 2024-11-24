@@ -1,0 +1,202 @@
+.HomeTop {
+    display: flex;
+    margin-bottom: 10vh;
+}
+
+.top-l {
+    display: flex;
+    flex-direction: column;
+    width: 65vw;
+}
+
+.top-h {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 6vh;
+    padding: 5vh 2vw;
+}
+
+.top-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.top-card-elements {
+    display: flex;
+    flex-direction: row;
+    padding: 2vh 2vw;
+    margin-bottom: 5vh;
+    width: 30vw;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    background: rgb(255, 206, 236, 0.4);
+    margin-left: 2vw;
+}
+
+.top-card-img {
+    width: 10vw;
+}
+
+.top-img {
+    width: 10vw;
+    height: 18vh;
+    object-fit: contain;
+}
+
+.top-data {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2vw;
+    white-space: nowrap;
+    margin-top: 2vh;
+}
+
+.top-name {
+    font-weight: bold;
+    font-size: 2.75vh;
+    cursor: pointer;
+}
+
+.top-name:hover, .top-type:hover {
+    color: rgb(252, 185, 0);
+}
+
+.top-type {
+    font-size: 2.2vh;
+    color: rgba(36, 36, 36, 0.7);
+    cursor: pointer;
+}
+
+.top-price {
+    font-weight: bold;
+    font-size: 2.75vh;
+    color: rgb(252, 185, 0);
+}
+
+.top-cart {
+    display: flex;
+    flex-direction: row;
+    height: 5.5vh;
+    width: 2.75vw;
+    background: rgb(255, 194, 34);
+    border-radius: 50%;
+    padding: 0.5vh 0.7vw;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 2.75vh;
+    cursor: pointer;
+    margin-left: 10vw;
+}
+
+.top-cart:hover {
+    color: rgb(255, 255, 255);
+}
+
+.top-r {
+    width: 30vw;
+    height: 90vh;
+    border: 1px solid rgb(255, 194, 34);
+    border-radius: 15px;
+    margin-left: 2vw;
+    margin-top: 8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-content: space-around;
+    background: rgb(252, 185, 0);
+    position: relative; /* Ensure the child absolute positioning is within this element */
+}
+
+.img-top-r {
+    width: 30vw;
+    height: 50vh;
+    object-fit: contain;
+    position: relative;
+}
+
+.top-r-data {
+    position: absolute;
+    z-index: 1;
+    top: 2vh;
+    left: 3vw;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: white; /* Ensure the text is visible */
+    text-align: center;
+}
+
+.top-r-h1 {
+    font-family: "Norican", cursive;
+    font-size: 7vh;
+}
+
+.top-r-h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10vh;
+    color: rgb(240, 0, 0);
+}
+
+.top-r-h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2.5vh;
+}
+
+.top-r-h4 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 4vh;
+    color: rgb(240, 0, 0);
+}
+
+@media (max-width:600px) {
+    .HomeTop {
+        display: static;
+        margin-bottom: 10vh;
+    }
+    .top-h {
+        text-align: center;
+        font-size: 2em;
+        align-self: center;
+    }
+    .top-head {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 5vh 0vw;
+    }
+    .top-r {
+        display: none;
+    }
+    .top-l {
+        width: 100vw;
+    }
+    .top-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .top-card-elements {
+        width: 85vw;
+        margin-left: 8vw;
+    }
+    .top-img {
+        width: 30vw;
+    }
+    .top-data {
+        margin-left: 25vw;
+    }
+    .top-cart {
+        display: flex;
+        flex-direction: row;
+        cursor: pointer;
+        justify-self: flex-end;
+        margin-left: 32vw;
+        height: 6vh;
+        margin-right: 2vw;
+        background: rgb(255, 194, 34);
+        border-radius: 30%;
+        padding: 0.5vh 10vw;
+        padding-left: 2vw;   
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        font-size: 2em;
+    }
+}

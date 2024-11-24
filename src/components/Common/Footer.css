@@ -1,0 +1,177 @@
+.Footer {
+    margin-top: 25vh;
+    height: 90vh;
+    width: 100vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.f-top {
+    height: 80vh;
+    width: 100vw;
+    background: rgb(51, 51, 51);
+}
+
+.f-logo {
+    width: 12vw;
+    height: 12vh;
+    margin: 15vh 0vw;
+    margin-bottom: 10vh;
+}
+
+.f-top-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.f-top-divs {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.f-top-cols {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.f-top-span-head {
+    font-weight: bolder;
+    font-size: 3vh;
+    padding-bottom: 5vh;
+}
+
+.f-top-span1 {
+    font-size: 2.3vh;
+    letter-spacing: 0.1vw;
+    line-height: 4vh;
+}
+
+.f-top-cont {
+    font-weight: bolder;
+    color: rgb(252, 185, 0);
+    font-size: 3vh;
+    padding-top: 2vh;
+}
+
+.f-top-socials {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5vh;
+    font-size: 2.75vh;
+
+}
+
+.soc-icon-foot {
+    width: 3vw;
+    height: 6vh;
+    padding: 0.75vh 0vw;
+    border-radius: 50%;
+    background: white;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+
+.soc-icon-foot:hover {
+    background: rgb(252, 185, 0);
+}
+
+.f-bot {
+    background: rgb(0, 161, 73);
+    height: 10vh;
+    display: flex;
+    justify-content: space-between ;
+}
+
+.f-bot-l {
+    width: 50vw;
+    padding: 3vh 5vw;
+    display: flex;
+    justify-content: space-between;
+    background: rgb(0, 161, 73);
+    color: white;
+    font-size: 2.2vh;
+    white-space: nowrap;
+}
+
+.f-bot-conp {
+    color: rgb(252, 185, 0);
+}
+
+.f-img-r {
+    width: 20vw;
+    height: 5vh;
+    object-fit: contain;
+    margin: 2vh 5vw;
+}
+@media(max-width:600px){
+    .Footer {
+        margin-top: 0vh;
+        height: auto;
+        width: 100vw;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(255, 255, 255);
+    }
+    .f-top {
+        height: auto;
+        width: 100vw;
+        background: rgb(51, 51, 51);
+    }
+    .f-logo {
+        width: 35vw;
+        height: 12vh;
+        margin: 15vh 0vw;
+        margin-bottom: 10vh;
+    }
+    .f-top-cols {
+        display: grid;
+        grid-template-columns: repeat(1fr);
+        justify-content: space-around;
+        row-gap: 5vh;
+    }
+    .f-top-divs {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .f-top-span-head {
+        padding-bottom: 2vh;
+        font-size: 1.5em;
+    }
+    .f-top-socials {
+        padding-bottom: 5vh;
+    }
+    
+    .soc-icon-foot {
+        width: 12vw;
+        height: 6vh;
+        padding: 01vh 0vw;
+    }
+    .f-bot {
+        background: rgb(0, 161, 73);
+        display: flex;
+        justify-content: space-between ;
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    }
+    
+    .f-bot-l {
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 2vh;
+        flex-direction: column;
+        color: white;
+        font-size: 2.2vh;
+        text-align: center;
+    }
+    .f-img-r {
+        width: 80vw;
+        height: 5vh;
+        object-fit: contain;
+        margin: 2vh 5vw;
+    }
+}

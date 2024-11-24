@@ -1,0 +1,115 @@
+.product-overlay {
+    position: fixed;
+    top: 0vh;
+    left: 0vw;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000;
+}
+
+.Product {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    height: 85vh;
+    width: 35vw;
+
+}
+
+.img-product {
+    height: 20vh;
+}
+
+.bi-cross {
+    position: absolute;
+    left: 65.15vw;
+    font-size: 5vh;
+    cursor: pointer;
+    background-color: rgb(0, 0, 0, 0.7);
+    color: rgb(255, 255, 255);
+    border-top-right-radius: 10px;
+}
+
+.bi-cross:hover {
+    background-color: rgb(0, 0, 0, 0.6);
+}
+
+.img-product {
+    width: 100%;
+    height: 40vh;
+    object-fit: contain;
+    margin-bottom: 2vh;
+}
+
+.product-details {
+    padding: 2vh 1vw;
+    margin: 1vh 1vw;
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid rgb(0, 0, 0, 0.15);
+    border-radius: 10px;
+    margin-bottom: 2vh;
+    background: rgb(255, 218, 185, 0.2);
+}
+
+.product-name {
+    font-weight: bold;
+    font-size: 3vh;
+}
+
+.product-price {
+    color:rgb(25, 182, 33);
+    font-weight: bold;
+    font-size: 3.5vh;
+}
+
+.product-desc {
+    font-size: 2.3vh;
+    letter-spacing: 0.05vw;
+    padding: 1vh 0vw;
+}
+
+.wrapper-btn {
+    display: flex;
+    justify-content: space-between;
+    padding: 0vh 2vw;
+}
+
+.prod-btn {
+    margin: 0vh 2vw;
+    margin-top: 2vh;
+}
+
+@media(max-width:600px) {
+    .Product {
+        height: auto;
+        width: 95vw;
+        padding-bottom: 2vh;
+    }
+    .bi-cross {
+        position: absolute;
+        left: 90vw;
+        font-size: 4vh;
+    }
+    .img-product {
+        margin-bottom: 0vh;
+    }
+    .product-details {
+        padding: 2vh 1vw;
+        margin: 1vh 1vw;
+        display: flex;
+        flex-direction: column;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border: 1px solid rgb(0, 0, 0, 0.15);
+        border-radius: 10px;
+        margin-bottom: 2vh;
+        background: rgb(255, 218, 185, 0.2);
+        overflow: auto;
+    }
+}

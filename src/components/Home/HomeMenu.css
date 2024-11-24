@@ -1,0 +1,43 @@
+.HomeMenu {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: gilroy, helveticaneue-light, helvetica neue light, helvetica neue, Helvetica, Arial, lucida grande, sans-serif;
+    font-size: 2.25vh;
+    margin-bottom: 10vh;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    gap: 1vw; /* Add space between items if needed */
+}
+
+.menu-flex {
+    transition: color 0.4s ease-in-out;
+}
+
+.menu-img-home {
+    width: 8vw;
+    height: 15vh;
+    object-fit: contain;
+    transition: transform 0.4s ease-in-out; /* Transition for scaling effect */
+}
+
+.menu-flex:hover {
+    color: rgb(252, 185, 0);
+}
+
+.menu-flex:hover .menu-img-home {
+    transform: scale(1.25); /* Scaling the image instead of changing width and height */
+}
+
+@media (max-width:600px) {
+    .HomeMenu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+    }
+    .menu-img-home {
+        width: 25vw;
+    }
+    .menu-span-home {
+        font-size: 0.9em;
+    }
+}

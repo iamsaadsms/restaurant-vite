@@ -1,0 +1,178 @@
+.HomeHot {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.hot-img {
+    width: 100%;
+    height: 85vh;
+    object-fit: cover;
+}
+
+.hot-l {
+    position: absolute;
+    z-index: 1;
+    width: 25vw;
+    height: 20vh;
+    background: #ECEFF1;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 20vh;
+    left: 20vw;
+    font-weight: bolder;
+    text-align: center;
+    padding-bottom: 5vh;
+    line-height: 8vh;
+}
+
+.hot-l::after,
+.hot-l::before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    border-radius: inherit;
+    z-index: -1; /* Ensure pseudo-elements are behind the main content */
+}
+
+.hot-l::after {
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    left: 50px;
+}
+
+.hot-l::before {
+    width: 180px;
+    height: 180px;
+    top: -70px;
+    left: 130px;
+}
+
+.hot-dis-1 {
+    font-family: "Norican", cursive;
+    font-size: 4vh;
+    line-height: 3vh;
+}
+
+.hot-dis-2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 8vh;
+    color: rgb(252, 185, 0);
+}
+
+.hot-dis-3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 9vh;
+}
+
+.hot-r {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    top: 24vh;
+    left: 60vw;
+    font-weight: bolder;
+    text-align: left;
+}
+
+.hot-dis-r1 {
+    font-family: "Norican", cursive;
+    font-size: 8vh;
+    color: rgb(255, 255, 255);
+}
+
+.hot-dis-r2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15vh;
+    line-height: 12vh;
+    color: rgb(252, 185, 0);
+}
+
+.hot-design {
+    position: absolute;
+    z-index: 1;
+    top: 20vh;
+    left: 80vw;
+}
+
+.hot-d {
+    height: 20vh;
+    object-fit: contain;
+}
+
+.hot-btn {
+    position: absolute;
+    z-index: 1;
+    top: 55vh;
+    left: 60vw;
+}
+
+@media (max-width: 600px) {
+    .hot-l {
+        position: absolute;
+        z-index: 1;
+        width: 50vw;
+        height: 20vh;
+        background: #ECEFF1;
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1), 0px 4px 15px rgba(255, 255, 255, 0.5); /* Soft shadows for cloud effect */
+        border-radius: 50% 70% 50% 60%; /* Cloud shape */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 10vh;
+        left: 5vw;
+        font-weight: bolder;
+        text-align: center;
+        padding-bottom: 2vh;
+        line-height: 6vh;
+    }
+    
+    /* Adjust font sizes for smaller screens */
+    .hot-dis-1 {
+        font-size: 3vh;
+    }
+
+    .hot-dis-2 {
+        font-size: 5vh;
+    }
+
+    .hot-dis-3 {
+        font-size: 6vh;
+    }
+    .hot-r {
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        top: 35vh;
+        left: 5vw;
+        font-weight: bolder;
+        text-align: left;
+        text-align: center;
+    }
+    .hot-dis-r2 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 6em;
+        line-height: 12vh;
+        color: rgb(252, 185, 0);
+    }
+    .hot-design {
+        display: none;
+    }
+    .hot-button {
+        width: 40vw;
+    }
+    .hot-btn {
+        position: absolute;
+        z-index: 1;
+        top: 65vh;
+        left: 30vw;
+    }
+}

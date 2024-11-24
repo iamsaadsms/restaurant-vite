@@ -1,0 +1,38 @@
+[
+    {
+        "img":"cat3.png",
+        "name":"Pepperoni Pizza",
+        "type":"Pizza",
+        "price":"$14.90"
+    },
+    {
+        "img":"cat4.png",
+        "name":"Chicken Nuggets",
+        "type":"Nuggets",
+        "price":"$7.90"
+    },
+    {
+        "img":"cat5.png",
+        "name":"Beef Burger",
+        "type":"Burger",
+        "price":"$12.90"
+    },
+    {
+        "img":"cat6.png",
+        "name":"Drumsticks",
+        "type":"Chicken",
+        "price":"$15.90"
+    },
+    {
+        "img":"cat7.png",
+        "name":"Russian Salad",
+        "type":"Salad",
+        "price":"$9.90"
+    },
+    {
+        "img":"cat8.png",
+        "name":"Latte",
+        "type":"Drinks",
+        "price":"$6.50"
+    }
+]

@@ -1,0 +1,134 @@
+.HomePop {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15vh 0vw;
+    font-family: gilroy, helveticaneue-light, helvetica neue light, helvetica neue, Helvetica, Arial, lucida grande, sans-serif;
+    background: rgb(254, 205, 165, 0.4);
+    width: 100vw;
+    margin-left: 0vw;
+}
+
+
+.pop-set {
+    width: 30vw;
+    height: 40vh;
+    background: rgb(0, 161, 73);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4vh 2vw;
+    border-radius: 10px;
+}
+
+.pop-data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.pop-data-l {
+    display: flex;
+    flex-direction: column;
+    width: 11vw;
+    justify-content: space-between;
+}
+
+
+.pop-data-r {
+    background: rgb(252, 185, 0, 0.8);
+    border-radius: 50%;
+    position: absolute; /* Absolute positioning for smooth scale transition */
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%); /* Centers the circle */
+    width: 13vw;
+    height: 28vh;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for scaling */
+    z-index: 1; /* Circle behind the main image */
+}
+
+.pop-set:hover .pop-data-r {
+    transform: translate(-50%, -50%) scale(1.2); /* Scale up the circle uniformly */
+}
+
+.pop-data-img {
+    z-index: 3; /* Main image on top */
+    width: 14vw;
+    height: 25vh;
+    object-fit: contain;
+    transition: transform 0.5s ease-in-out; /* Optional smooth transition for image zoom effect */
+}
+
+.pop-data-h {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 4vh;
+    padding-bottom: 2vh;
+}
+
+.pop-data-sub {
+    color: rgb(255, 255, 255);
+    font-size: 2.2vh;
+    padding-bottom: 4vh;
+}
+
+.pop-data-last {
+    color: rgb(252, 185, 0);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 3vh;
+}
+
+.pop-data-last:hover {
+    color: rgb(0, 0, 0);
+}
+
+
+@media (max-width:600px) {
+    .HomePop {
+        display: grid;
+        grid-template-columns: repeat(1fr);
+        row-gap: 2vh;
+    }
+    .pop-set {
+        width: 90vw;
+        height: 30vh;
+        position: relative;
+    }
+    .pop-data {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20vw;
+    }
+    .pop-data-l {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0vh;
+        width: 40vw;
+    }
+    .pop-data-r {
+        position: absolute; /* Absolute positioning for smooth scale transition */
+        top: 50%;
+        left: 75%;
+        width: 35vw;
+        height: 18vh;
+    }
+    .pop-data-img {
+        z-index: 3; /* Main image on top */
+        width: 35vw;
+        height: 25vh;
+        padding-bottom: 10vh;
+        object-fit: contain;
+        transition: transform 0.5s ease-in-out; /* Optional smooth transition for image zoom effect */
+    }
+    .pop-data-h {
+        font-size: 1.8em;
+    }
+    .pop-data-last {
+        position: absolute;
+        top: 23vh;
+    }
+}

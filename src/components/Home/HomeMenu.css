@@ -12,11 +12,12 @@
 
 .menu-flex {
     transition: color 0.4s ease-in-out;
+    height: 10vh;
 }
 
 .menu-img-home {
     width: 8vw;
-    height: 15vh;
+    height: 100%;
     object-fit: contain;
     transition: transform 0.4s ease-in-out; /* Transition for scaling effect */
 }
@@ -29,7 +30,7 @@
     transform: scale(1.25); /* Scaling the image instead of changing width and height */
 }
 
-@media (max-width:600px) {
+@media (max-width:660px) {
     .HomeMenu {
         display: grid;
         grid-template-columns: repeat(2, 1fr); /* Two columns layout */
@@ -39,5 +40,29 @@
     }
     .menu-span-home {
         font-size: 0.9em;
+    }
+}
+
+@media (min-width:661px) and (max-width:1025px){
+    .HomeMenu {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Two columns layout */
+        row-gap: 2vh;
+        margin: 5vh 0vw;
+    }
+    .menu-flex {
+        transition: color 0.4s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 11vh;
+    }
+    .menu-img-home {
+        width: 15vw;
+        height: 100%;
+    }
+    .menu-span-home {
+        font-size: 0.7em;
     }
 }

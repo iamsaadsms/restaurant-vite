@@ -3,15 +3,18 @@ import './HomeThree.css';
 import HThree from '../JSON/HomeThree.json';
 import Button from "../Common/Button";
 
-const importAll = (r) => {
-    let images = {};
-    for (const path in r) {
-        images[path.replace('./', '')] = r[path];
+const images = import.meta.glob('../../assets/*.{png,svg,webp,jpeg,jpg}', { eager: true });
+
+const mapImages = () => {
+    const mappedImages = {};
+    for (const path in images) {
+        const fileName = path.split('/').pop(); // Extract file name
+        mappedImages[fileName] = images[path].default || images[path]; // Adjust based on Vite's import structure
     }
-    return images;
+    return mappedImages;
 };
 
-const images = importAll(import.meta.glob('../Media/*.{png,jpg,jpeg,svg,webp}', { eager: true }));
+const importedImages = mapImages();
 
 const HomeThree = () => {
     const [temps, setTemps] = useState([]);
@@ -20,8 +23,8 @@ const HomeThree = () => {
     useEffect(() => {
         const tempsWithImages = HThree.map(item => ({
             ...item,
-            img1: images[item.img1],
-            back: images[item.back]
+            img1: importedImages[item.img1],
+            back: importedImages[item.back]
         }));
         setTemps(tempsWithImages);
     }, []);
@@ -81,6 +84,6 @@ const HomeThree = () => {
             ))}
         </div>
     );
-}
+};
 
 export default HomeThree;

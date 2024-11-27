@@ -149,7 +149,7 @@
     justify-content: center;
 }
 /* Media query for small screens */
-@media (max-width: 600px) {
+@media (max-width: 660px) {
     .tabs-container {
         margin: 5vh 0;
     }
@@ -195,3 +195,22 @@
     }
 }
 
+@media(min-width:661px) and (max-width:1025px) {
+    .HomePopular {
+        margin-bottom: 0vh;
+        margin: 5vh 0vw;
+    }
+    .popular-head {
+        font-size: 4em;
+        font-weight: bold;
+        text-align: center;
+        margin: 0vh 0vw;
+    }
+    .tabs-btn {
+        padding: 1vh 4vw;
+        font-size: 1.2em;
+    }
+    .tabs-container {
+        margin: 5vh 0;
+    }
+}

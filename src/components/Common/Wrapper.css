@@ -1,6 +1,6 @@
 .wrapper {
-    height: 6vh;
-    width: 12vw;
+    height: 4vh;
+    width: 10vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,18 +26,22 @@
   .wrapper span {
     width: 100%;
     text-align: center;
-    font-size: 3vh;
+    font-size: 1em;
     font-weight: 600;
     cursor: pointer;
     user-select: none;
     color: rgb(97, 91, 91);
   }
   
-  @media(max-width:600px) {
+  @media(max-width:660px) {
     .wrapper {
+      height: 3.7vh;
       width: 25vw;
+      border-right: 1px solid rgba(0,0,0,0.1);
+      border-left: 1px solid rgba(0,0,0,0.1);
     }
     .wrapper .num {
       width: 20vw;
+      font-size: 1em;
     }
   }

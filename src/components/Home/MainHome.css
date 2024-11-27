@@ -132,7 +132,7 @@
     left: 45vw;
 }
 
-@media(max-width:600px) {
+@media(max-width:660px) {
     .MainHome {
         height: 140vh;
         margin-bottom: 10vh;
@@ -240,4 +240,120 @@
     .btn-menu {
         width: 30vw;
     }
+}
+
+@media (min-width:661px) and (max-width:1025px) {
+    .MainHome {
+        position: relative;
+        width: 100vw;
+        height: 50vh;
+        overflow: hidden;
+    }
+    
+    .bg-main {
+        position: relative;
+        height: 100%;
+        vertical-align: bottom;
+    }
+    
+.piz-img {
+    width: 50vw;
+    height: auto;
+    position: absolute;
+    top: 35vw;
+    left: 55vw;
+    object-fit: contain;
+    z-index: 2;
+    transition: transform 0.1s ease-out;
+}
+
+.shape-img {
+    display: none;
+}
+
+.leaf-img {
+    width: 40vw;
+    height: auto;
+    position: absolute;
+    top: 30vh;
+    left: 50vw;
+    object-fit: fill;
+    z-index: 1;
+    transition: transform 0.1s ease-out;
+}
+
+.tom-img {
+    width: 30vw;
+    height: auto;
+    position: absolute;
+    top: 15vw;
+    left: 35vw;
+    object-fit: contain;
+    z-index: 3;
+}
+
+.absolute-text {
+    position: absolute;
+    z-index: 3;
+    top: 12vh;
+    left: 2vw;
+    color: rgb(255, 255, 255);
+    font-family: gilroy, helveticaneue-light, helvetica neue light, helvetica neue, Helvetica, Arial, lucida grande, sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
+}
+
+.abs-h {
+    font-size: 4vh;
+    line-height: 5vh;
+}
+.abs-s {
+    padding-top: 0vh;
+    font-size: 2vh;
+    font-weight: bold;
+    color: rgb(0, 161, 73);
+}
+
+.abs-ex {
+    font-size: 1.25vh;
+    padding-top: 0vh;
+    letter-spacing: 0.1vw;
+}
+.MainHome .abs-btn-price .Button .btn {
+    font-size: 1.1em;
+}
+.abs-btn-price {
+    margin-top: 0vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25vw;
+}
+
+.abs-new-prc {
+    font-size: 2.5vh;
+    font-weight: bold;
+    color: rgb(0, 161, 73);
+}
+
+.abs-old-prc {
+    position: absolute;
+    z-index: 3;
+    left: 16vw;
+    font-size: 1.5vh;
+    font-weight: bold;
+    letter-spacing: 0.05vw;
+    color: rgb(223, 223, 223);
+}
+.abs-btn-menu {
+    position: absolute;
+    z-index: 10;
+    width: 10vw;
+    top: 47vh;
+    left: 35vw;
+}
+.MainHome .abs-btn-menu .Button .btn{
+    font-size: 1.5vh;
+}
 }

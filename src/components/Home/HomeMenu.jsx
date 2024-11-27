@@ -2,28 +2,27 @@ import React, { useEffect, useState } from "react";
 import './HomeMenu.css';
 import HMenu from '../JSON/HomeMenu.json';
 
-// Import images dynamically using Vite's import.meta.glob
-const importAll = (r) => {
-    let images = {};
-    for (const path in r) {
-        images[path.replace('./', '')] = r[path];
-    }
-    return images;
-}
-
-// Using import.meta.glob to import images from the Media/cat directory
-const images = import.meta.glob('../../assets/*.{png,jpg,jpeg,svg,webp}');
+// Import images dynamically
+const images = import.meta.glob('../../assets/cat/*.{png,jpg,jpeg,svg,webp}', { eager: true });
 
 const HomeMenu = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
         const itemsArray = Object.values(HMenu);
-        const itemsWithImages = itemsArray.map(item => ({
-            ...item,
-            img: images[item.img]
-        }));
-        setItems(itemsWithImages);
+
+        const loadImages = () => {
+            const itemsWithImages = itemsArray.map(item => {
+                const imgPath = images[`../../assets/cat/${item.img}`];
+                return {
+                    ...item,
+                    img: imgPath?.default || imgPath, // Get resolved URL
+                };
+            });
+            setItems(itemsWithImages);
+        };
+
+        loadImages();
     }, []);
 
     return (
@@ -37,7 +36,7 @@ const HomeMenu = () => {
                 </div>
             ))}
         </div>
-    )
-}
+    );
+};
 
 export default HomeMenu;

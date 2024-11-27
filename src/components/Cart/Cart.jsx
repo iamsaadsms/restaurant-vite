@@ -48,10 +48,10 @@ const Cart = () => {
         </div>
         <div className="p-r">
           <span className="p-h">QUANTITY</span>
-          <span className="p-h">TOTAL</span>
+          <span className="p-h h-total">TOTAL</span>
         </div>
       </div>
-      <hr style={{ margin: "0 17vw", marginTop: "1vh" }} />
+      <hr style={{ margin: "0 17vw", marginTop: "1vh" }} className='hr-cart'/>
 
       <div className="cart-content-final">
         {cartItems.length === 0 ? (
@@ -63,23 +63,33 @@ const Cart = () => {
                 <img src={item.img} alt={item.name} className="img-item" /> {/* Correct image path */}
                 <div className="items-in-cart">
                   <span className="i-detail i-n">{item.name}</span>
-                  <span className="i-detail">Price: RS {item.price}</span>
+                  <span className="i-detail ">RS {item.price}</span>
                   <button onClick={() => removeCartItem(item.id)} className="remove-cart-btn">
                     <i className="bi bi-trash3 cart-trash"></i>
                   </button>
+                  <div className='items-wrapper-cart'>
+                    <Wrapper
+                      quantity={item.quantity}
+                      onQuantityChange={(newQuantity) => updateCartItemQuantity(item.id, newQuantity)}
+                    />
+                  </div>
                 </div>
               </div>
 
               <div className="cart-right">
                 <div className="cart-qty">
-                  <span className="i-detail">Quantity: {item.quantity}</span>
-                  <Wrapper
-                    quantity={item.quantity}
-                    onQuantityChange={(newQuantity) => updateCartItemQuantity(item.id, newQuantity)}
-                  />
+                  <div className='cart-qty-wrapper'>
+                    <Wrapper
+                      quantity={item.quantity}
+                      onQuantityChange={(newQuantity) => updateCartItemQuantity(item.id, newQuantity)}
+                    />
+                  </div>
+                  <button onClick={() => removeCartItem(item.id)} className="remove-cart-btn">
+                    <i className="bi bi-trash3 cart-trash-qty"></i>
+                  </button>
                 </div>
                 <div className="cart-item-total">
-                  <span className="i-total">RS {(item.price * item.quantity).toFixed(2)}</span>
+                  <span className="i-total i-price">RS {(item.price * item.quantity).toFixed(2)}</span>
                 </div>
               </div>
             </div>
@@ -90,7 +100,7 @@ const Cart = () => {
       <hr />
       
       <div className="cart-ultimate-total">
-        <span className="i-total">Total: RS {totalPrice.toFixed(2)}</span> {/* Displaying the total price */}
+        <span className="i-ultimate-total">Total: RS {totalPrice.toFixed(2)}</span> {/* Displaying the total price */}
       </div>
 
     </div>

@@ -65,20 +65,20 @@
     color: rgb(255, 255, 255);
     font-weight: bold;
     font-size: 4vh;
-    padding-bottom: 2vh;
+    padding-bottom: 0vh;
 }
 
 .pop-data-sub {
     color: rgb(255, 255, 255);
     font-size: 2.2vh;
-    padding-bottom: 4vh;
+    padding-bottom: 0vh;
 }
 
 .pop-data-last {
     color: rgb(252, 185, 0);
     cursor: pointer;
     font-weight: bold;
-    font-size: 3vh;
+    font-size: 2.5vh;
 }
 
 .pop-data-last:hover {
@@ -86,7 +86,7 @@
 }
 
 
-@media (max-width:600px) {
+@media (max-width:660px) {
     .HomePop {
         display: grid;
         grid-template-columns: repeat(1fr);
@@ -130,5 +130,67 @@
     .pop-data-last {
         position: absolute;
         top: 23vh;
+    }
+}
+
+@media (min-width:661px) and (max-width:1025px) {
+    .HomePop {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-items: center;
+        row-gap: 2vh;
+        padding-left: 1vw;
+        padding: 2vh 0vw;
+    }
+    .pop-set {
+        width: 48vw;
+        height: 12vh;
+        position: relative;
+    }
+    .pop-data {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0vw;
+    }
+    .pop-data-l {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0vh;
+        width: 15vw;
+    }
+    .pop-data-r {
+        position: absolute; /* Absolute positioning for smooth scale transition */
+        top: 50%;
+        left: 75%;
+        width: 20vw;
+        object-fit: contain;
+        height: 10vh;
+    }
+    .pop-data-img {
+        z-index: 3; /* Main image on top */
+        width: 100%;
+        height: auto;
+        padding-bottom: 10vh;
+        object-fit: contain;
+        transition: transform 0.5s ease-in-out; /* Optional smooth transition for image zoom effect */
+    }
+    .pop-data-last {
+        position: absolute;
+        top: 8vh;
+        font-size: 1.7em;
+    }
+    .pop-data-h {
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        font-size: 1.7em;
+        padding-bottom: 0vh;
+    }
+    
+    .pop-data-sub {
+        color: rgb(255, 255, 255);
+        font-size: 1em;
+        padding-bottom: 4vh;
     }
 }

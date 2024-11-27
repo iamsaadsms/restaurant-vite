@@ -148,7 +148,7 @@
     color: rgb(240, 0, 0);
 }
 
-@media (max-width:600px) {
+@media (max-width:660px) {
     .HomeTop {
         display: static;
         margin-bottom: 10vh;
@@ -198,5 +198,25 @@
         padding-left: 2vw;   
         border: 1px solid rgba(0, 0, 0, 0.2);
         font-size: 2em;
+    }
+}
+
+@media(min-width:661px) and (max-width:1025px) {
+    .HomeTop {
+        display: flex;
+        margin-bottom: 10vh;
+    }
+    
+    .top-l {
+        display: flex;
+        flex-direction: column;
+        width: 65vw;
+    }
+    
+    .top-h {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        font-size: 6vh;
+        padding: 5vh 2vw;
     }
 }

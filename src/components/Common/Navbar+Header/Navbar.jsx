@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import './Navbar.css';
-import Header from "./Header";
 import logo from '../../Media/logo.svg';
 import Navtabs from "./Navtabs";
 import bike from '../../Media/bike.png';
@@ -15,7 +14,7 @@ const Navbar = () => {
             if (timer) clearTimeout(timer);
             timer = setTimeout(() => {
                 if (window.scrollY > 50) {
-                    setPadding('0vh 2vw');
+                    setPadding('2vh 2vw');
                 } else {
                     setPadding('5vh 2vw');
                 }
@@ -32,13 +31,10 @@ const Navbar = () => {
 
     return (
         <>
-            <Header />
             <div className="Navbar" style={{ padding }}>
                 <div className="nav-items-tabs">
                     <Link to={'/home'} className="div-navbar-logo">
-                        <div>
-                            <img src={logo} className="nav-logo" alt="Logo" />
-                        </div>
+                    <img src={logo} className="nav-logo" alt="Logo" />
                     </Link>
                     <Navtabs />
                 </div>

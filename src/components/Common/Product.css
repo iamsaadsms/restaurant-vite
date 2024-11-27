@@ -86,7 +86,7 @@
     margin-top: 2vh;
 }
 
-@media(max-width:600px) {
+@media(max-width:660px) {
     .Product {
         height: auto;
         width: 95vw;
@@ -94,7 +94,7 @@
     }
     .bi-cross {
         position: absolute;
-        left: 90vw;
+        left: 90.6vw;
         font-size: 4vh;
     }
     .img-product {

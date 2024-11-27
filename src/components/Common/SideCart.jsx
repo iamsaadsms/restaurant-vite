@@ -20,7 +20,7 @@ const SideCart = ({ isActive, cartItems, toggleSideCart, updateCartItemQuantity,
         <div className={`side-cart-container ${isActive ? 'active' : ''}`}>
             <div className="side-cart-header">
                 <span className="side-cart-head">YOUR CART</span>
-                <span className="side-cart-head" id="side-cross" onClick={toggleSideCart}>
+                <span className="side-cart-head side-cross" id="side-cross" onClick={toggleSideCart}>
                     <i className="bi bi-x cart-cross side-cross"></i>
                 </span>
             </div>
@@ -44,20 +44,25 @@ const SideCart = ({ isActive, cartItems, toggleSideCart, updateCartItemQuantity,
                                                 onQuantityChange={(newQuantity) => updateCartItemQuantity(item.id, newQuantity)}
                                             />
                                         </div>
-                                        <button onClick={() => removeCartItem(item.id)} className='remove-btn-side-cart'>
-                                            <i className="bi bi-trash3 trash"></i>
-                                        </button>
                                     </div>
                                 </div>
+                                
+                                <div className="side-cart-trash">
+                                            <button onClick={() => removeCartItem(item.id)} className='remove-btn-side-cart'>
+                                                <i className="bi bi-trash3 trash"></i>
+                                            </button>
+                                        </div> 
                             </div>
+                            
                         </div>
                     ))
+                    
                 )}
+                
             </div>
-            <hr />
             <div className="subtotal-side-cart">
-                <span>Subtotal:</span>
-                <span>RS {subtotal.toFixed(2)}</span>
+                <span className="subtotal-span">Subtotal:</span>
+                <span className="subtotal-span">RS {subtotal.toFixed(2)}</span>
             </div>
             <div className="side-cart-actions">
                 <Button data={"GO TO CART"} className='side-cart-btn' onClick={handleViewCart} />

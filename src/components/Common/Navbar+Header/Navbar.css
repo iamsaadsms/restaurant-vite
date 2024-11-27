@@ -1,123 +1,217 @@
+/* Default Styling for Navbar */
 .Navbar {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 5vh 2vw;
-    position: sticky;
-    top: 0;
-    background-color: white;
-    z-index: 1000;
-    width: 100vw;
-    transition: padding 0.3s ease;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2vh 2vw;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+  width: 100vw;
+  transition: padding 0.3s ease;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-logo {
+  width: 10vw;
+  height: 10vh;
+}
+
+.bike-img {
+  width: 4vw;
+  height: 9vh;
+  object-fit: cover;
+}
+
+.delivery, .right-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-call {
+  color: grey;
+  font-size: 2.25vh;
+}
+
+.nav-contact {
+  color: rgb(255, 194, 34);
+  font-weight: bold;
+  font-size: 3.5vh;
+}
+
+.nav-items-tabs {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1vw;
+  margin-left: 1vw;
+  letter-spacing: 0.08em;
+}
+
+.nav-icon {
+  height: 6vh;
+  width: 3vw;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  padding: 0.5vh 0.7vw;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 3vh;
+  margin-top: 2vh;
+  cursor: pointer;
+}
+
+.nav-icon:hover {
+  background: rgb(255, 194, 34);
+}
+
+.nav-icon-link {
+  text-decoration: none;
+  color: black;
+  margin-top: 3vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background-color: #222;
+  z-index: 2000;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  padding: 2vh 2vw;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar .nav-item .nav-link {
+  color: white;
+  font-size: 2vh;
+  text-transform: uppercase;
+  padding: 1vh 0;
+  display: block;
+}
+
+.sidebar .cross {
+  font-size: 2.5vh;
+  position: absolute;
+  top: 2vh;
+  right: 2vw;
+  cursor: pointer;
+}
+
+.navtab-heads {
+  margin-right: 2.5vw;
+  color: black;
+  font-weight: bold;
+}
+
+/* Hover and Active States */
+.nav-item .nav-link:hover,
+.nav-item .nav-link:focus,
+.nav-item .nav-link.active {
+  color: rgb(255, 194, 34) !important;
+}
+
+.nav-div {
+  border: none;
+  background-color: white;
+  margin-top: 1vh;
+}
+
+.nav-list {
+  line-height: 5vh;
+}
+
+/* MegaMenu Styling */
+.megamenu .dropdown-menu {
+  background: none;
+  border: none;
+  width: 70vw;
+  position: absolute;
+  right: -20vw;
+}
+
+.column-custom {
+  padding: 4vh 2vw;
+  padding-bottom: 2vh;
+}
+
+/* Responsive Design */
+
+/* Mobile View (max-width: 600px) */
+@media (max-width: 600px) {
+  .nav-items-tabs {
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+  }
+
+  .right-icons, .delivery {
+    display: none;
+  }
+
+  .nav-logo {
+    width: 30vw;
+    height: auto;
+  }
+
+  .Navbar {
+    padding: 2vh 2vw;
+    justify-content: center;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-  
-  .nav-logo {
-    width: 10vw;
-    height: 10vh;
-  }
-  
-  .bike-img {
-    width: 4vw;
-    height: 9vh;
-    object-fit: cover;
-  }
-  
-  .delivery {
+
+  .div-navbar-logo {
     display: flex;
     justify-content: center;
-    width: 20vw;
+    width: 100%;
+    margin-right: 25vw;
   }
-  
-  .bike-data {
-    display: flex;
-    flex-direction: column;
-    width: 14vw;
-  }
-  
-  .nav-call {
-    color: grey;
-    font-size: 2.25vh;
-  }
-  
-  .nav-contact {
-    color: rgb(255, 194, 34);
-    font-weight: bold;
-    font-size: 3.5vh;
-  }
-  
-  .nav-items-tabs {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 1vw;
-    margin-left: 1vw;
-  }
-  
-  .nav-icon {
-    height: 6vh;
-    width: 3vw;
-    background: rgb(255, 255, 255);
-    border-radius: 50%;
-    padding: 0.5vh 0.7vw;   
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    font-size: 3vh;
-    margin-top: 2vh;
-    cursor: pointer;
-  }
-  
-  .nav-icon:hover {
-    background: rgb(255, 194, 34);
-  }
-  
-  .right-icons {
-    display: flex;
-    gap: 2vw;
-  }
-
-  .nav-icon-link {
-    text-decoration: none;
-    color: black;
-    margin-top: 3vh;
-  }
-  
-  /* Mobile view styling for max-width 600px */
-/* Mobile view styling for max-width 600px */
-/* Mobile view styling for max-width 600px */
-@media (max-width: 600px) {
-    .nav-items-tabs {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row-reverse;
-    }
-
-    .right-icons, .delivery {
-        display: none;
-    }
-
-    .nav-logo {
-        width: 30vw;
-        height: auto;
-    }
-
-    .Navbar {
-        padding: 2vh 2vw;
-        justify-content: center;
-        position: sticky; /* Make navbar sticky */
-        top: 0; /* Stick to the top */
-        left: 0;
-        right: 0;
-        z-index: 1000;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        height: 7vh;
-    }
-
-    .div-navbar-logo {
-        display: flex;
-        justify-content: center; /* Centers the logo */
-        width: 100%; /* Ensures the container spans the full width */
-        margin-right: 25vw;
-    }
 }
 
+/* Tablet View (min-width: 661px and max-width: 1025px) */
+@media (min-width: 661px) and (max-width: 1025px) {
+  .Navbar {
+    padding: 0vh 0vw;
+    display: flex;
+    justify-content: center;
+    height: 5vh;
+  }
+
+  .nav-logo {
+    width: 15vw;
+    height: auto;
+  }
+  .div-navbar-logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-right: 30vw;
+  }
+  .nav-items-tabs {
+    flex-direction: column;
+    align-items: center;
+    gap: 0vh;
+  }
+  .sidebar .cross {
+    font-size: 2.5vh;
+    position: absolute;
+    top: -6vh;
+    right: 2vw;
+    cursor: pointer;
+  }
+  .nav-icon {
+    height: 7vh;
+    width: 4vw;
+    font-size: 2.5vh;
+  }
+  .right-icons {
+    display: none;
+  }
+}
